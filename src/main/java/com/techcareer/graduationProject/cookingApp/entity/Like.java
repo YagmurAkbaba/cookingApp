@@ -6,29 +6,25 @@ import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.util.List;
-
 @Entity
-@Table(name = "recipe")
+@Table(name = "r_like")
 @Data
-public class Recipe {
+public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long recipeId;
+    private Long likeId;
+
+    // private Long recipeId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "recipe_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün tarifleri da silinsin
+    @JsonIgnore
+    Recipe recipe;
 
     // private Long userId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün tarifleri da silinsin
     @JsonIgnore
-    private User user;
-
-    private String title;
-    @ElementCollection
-    private List<String> ingredients;
-
-    @Lob
-    @Column(columnDefinition = "text")
-    private String text;
-
+    User user;
 }

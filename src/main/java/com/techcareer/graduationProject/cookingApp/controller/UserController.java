@@ -33,7 +33,7 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserById(userId), HttpStatus.OK);
     }
 
-    @PutMapping("updateUser/{userId}")
+    @PutMapping("/updateUser/{userId}")
     public ResponseEntity<Boolean> updateUserById(@PathVariable Long userId, @RequestBody UserCreateUpdateRequestDto userCreateUpdateRequestDto){
         Boolean isUserUpdated = userService.updateUserById(userId, userCreateUpdateRequestDto);
         return new ResponseEntity<>(isUserUpdated, HttpStatus.OK);
