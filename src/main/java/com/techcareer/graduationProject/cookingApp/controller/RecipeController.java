@@ -25,18 +25,18 @@ public class RecipeController {
     }
 
     @GetMapping("/getRecipeById/{recipeId}")
-    public ResponseEntity<RecipeResponseDto> getUserById(@PathVariable Long recipeId){
+    public ResponseEntity<RecipeResponseDto> getRecipeById(@PathVariable Long recipeId){
         return new ResponseEntity<>(recipeService.getRecipeById(recipeId), HttpStatus.OK);
     }
 
     @PostMapping("/createRecipe")
-    public ResponseEntity<Boolean> createNewUser(@RequestBody RecipeCreateRequestDto userCreateRequestDto){
+    public ResponseEntity<Boolean> createNewRecipe(@RequestBody RecipeCreateRequestDto userCreateRequestDto){
         Boolean isRecipeCreated = recipeService.createNewRecipe(userCreateRequestDto);
         return new ResponseEntity<>(isRecipeCreated,HttpStatus.OK );
     }
 
     @PutMapping("/updateRecipe/{recipeId}")
-    public ResponseEntity<Boolean> updateUserById(@PathVariable Long recipeId, @RequestBody RecipeUpdateRequestDto userUpdateRequestDto){
+    public ResponseEntity<Boolean> updateRecipeById(@PathVariable Long recipeId, @RequestBody RecipeUpdateRequestDto userUpdateRequestDto){
         Boolean isUserUpdated = recipeService.updateRecipeById(recipeId, userUpdateRequestDto);
         return new ResponseEntity<>(isUserUpdated, HttpStatus.OK);
     }
