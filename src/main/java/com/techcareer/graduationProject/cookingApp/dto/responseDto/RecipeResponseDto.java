@@ -13,4 +13,6 @@ public class RecipeResponseDto {
     private String title;
     private List<String> ingredients;
     private String text;
+    private String userName;
+    private Long userId;
 }

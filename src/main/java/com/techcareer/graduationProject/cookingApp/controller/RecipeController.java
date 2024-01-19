@@ -15,6 +15,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/recipe")
+@CrossOrigin // to reach it from localhost:3000
 public class RecipeController {
     private final RecipeService recipeService;
 
