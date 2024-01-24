@@ -1,1 +1,5 @@
 ![auth-successful-register](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/689716db-c6ad-4d31-9149-94e3ffef2b3b)
+![auth-register-request-existing-username](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/85f33bb8-3274-4cf0-8b6f-cacb19a3befd)
+![auth-login](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/7cba71b5-a971-4061-a91e-1e8e738f0a98)
+![auth-login-wrong-password](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/a70a27ad-fe41-4066-9c04-24b87cf7b3b4)
+![auth-login-wrong-username](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/af44606b-42b9-4907-ae80-1cdb75c46251)
