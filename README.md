@@ -14,16 +14,16 @@
 ![user-create-request-successful](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c59c436d-2c01-4636-9af6-28a0b2a3cd99)
 ### User creation request with missing field(s) (password)
 ![user-create-request-missing-info](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f5d10293-3533-44a0-bfd6-8894011fa517)
+### Successful user update
+![user-update](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/2a675991-57c2-44c0-a5d0-1e10ca693aa7)
+### Update user request with nonexisting userId
+![update-nonexisting-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e5d0c0d1-481a-4f2d-ab25-a4b24141498a)
 ### Retrive all users
 ![user-get-all](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f3f34252-1d3b-48ad-94f0-5671c3a3a196)
 ### Retrive a user by userId
 ![user-get-by-ıd](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/5553a764-6f0f-4955-bb8a-25ea06972ea4)
 ### Get user request with nonexisting userId
 ![user-get-by-nonexisting-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f5bd0b06-0378-47f8-a4af-c695251c58f1)
-### Successful user update
-![user-update](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/2a675991-57c2-44c0-a5d0-1e10ca693aa7)
-### Update user request with nonexisting userId
-![update-nonexisting-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e5d0c0d1-481a-4f2d-ab25-a4b24141498a)
 ### Successful user deletion
 ![delete-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/1a2e0073-cd1f-4faf-aa71-02e7a4ed2117)
 ### Delete user request with nonexisting userId
@@ -84,7 +84,7 @@
 ![like-get-like-by-nonexisting-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f86672ae-86ce-4bd7-8b44-29d3c211b17d)
 ### Successful like deletion
 ![like-delete](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/290d1714-5761-4821-a59c-98b62131e6bd)
-### Delete like request with nonexisting recipeId
+### Delete like request with nonexisting likeId
 ![like-delete-nonexisting-like](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/8f2cd372-9a50-403e-8f87-35f7dad3f492)
 ## COMMENT REQUESTS
 ### Successful comment creation
@@ -95,10 +95,6 @@
 ![comment-update](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c5506a7f-34b9-4ba4-8c87-dc0e720f4467)
 ### Update comment request with nonexisting commentId
 ![comment-update-nonexisting-comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/33f2de97-b1fd-4bfd-b59b-4e7a0cffe20d)
-### Successful comment deletion
-![comment-delete](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/21a59882-e881-41ff-b6d6-aec6bf8aaf36)
-### Delete comment request with nonexisting commentId
-![comment-delete-nonexisting](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/41c83ccd-cad1-4830-9965-9b120a084160)
 ### Retrive all comments
 ![comment-get-all](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/5dca68cd-36e2-48c4-a1f7-0ead0086372d)
 ### Retrive all comments of a specific user
@@ -113,13 +109,16 @@
 ![comment-get-all-recipe-and-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/a4cea98e-1b93-4fb1-8f9a-ef799d1cba35)
 ### Get comment request of a non-existing comment (the user has no comment on the recipe)
 ![comment-get-all-user-of-no-comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e4f80425-458e-4e9d-8497-d6c057ccda87)
-### Get like of a user at a specific recipe request with non-existing recipeId and/or likeId 
+### Get comment of a user at a specific recipe request with non-existing recipeId and/or commentId 
 ![comment-get-all-nonexisting-user-or-and-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/dc9a0c33-9e42-426f-9c47-8a5e22587404)
-### Retrieve a like by likeId
+### Retrieve a like by commentId
 ![comment-get-by-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c784e79b-6e72-4bd5-ba48-24b4b13ecbeb)
-### Get like request with nonexisting likeId
+### Get comment request with nonexisting commentId
 ![comment-get-by-nonexisting-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/2b23ea25-2050-40c8-89ce-8ec0f3cf92c0)
-
+### Successful comment deletion
+![comment-delete](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/21a59882-e881-41ff-b6d6-aec6bf8aaf36)
+### Delete comment request with nonexisting commentId
+![comment-delete-nonexisting](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/41c83ccd-cad1-4830-9965-9b120a084160)
 
 
 
