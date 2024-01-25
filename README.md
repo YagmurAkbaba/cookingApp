@@ -5,7 +5,7 @@
   * Users have to create accounts. (Register)
   * Login is also implemented.
   * Registered users can share, update, delete, like, and comment on recipes.
-* The front-end of the project is under development. Check: https://github.com/YagmurAkbaba/cooking-App
+* The front-end of the project is under development. See: https://github.com/YagmurAkbaba/cooking-App
 # Technologies
 * Java - Spring Boot
 * MySql
