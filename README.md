@@ -24,8 +24,22 @@
 ![recipe-get-by-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/8d129e1b-1932-44a1-9ef1-dfc67ca19ec3)
 ![recipe-delete](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/727873b1-f65f-4575-9888-c6cb67b7df0d)
 ![recipe-delete-nonexisting-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/b2d0d900-6053-45dc-a553-2ad5ccaa600f)
-
-
+![like-create](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c1ea0386-1b21-4377-89c4-07aa22ef82dd)
+![like-create-missing-info](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/6e1b6b49-1ef4-44ca-bed1-501ea6159c54)
+![like-create-double](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/16c7f6d5-e846-4b0e-bfd0-5a1665f8f67e)
+![like-get-user-likes](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/6695af5f-2457-4799-a6ca-adb709c8cda4)
+![like-get-nonexisting-user-likes](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/8dc3f8cf-47d8-4a8f-bbc6-a5745ecb66b6)
+![like-get-all](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/8333900e-32dc-433e-a73f-8f7888750fcc)
+![like-get-likes-nonexisting-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/6a8aabfe-472b-4f57-b026-fe5a143f220d)
+![like-get-likes-of-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f067ef1e-793b-43cc-8479-3a6af2a8faec)
+![get-likes-nonexisting-like-or-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/5cebfaf1-01ed-4dce-96e4-d15378cf4f9e)
+![get-like-of-user-at-a-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/139b552b-44b8-4b27-9c93-fc95fd061897)
+![like-get-all-nonexisting-user-and-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/40670662-36ca-4b5b-8ee8-48f8d3945f13)
+![like-get-nonexisting-like](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f9eca59d-60c3-44d7-a08c-701e83a6bd0c)
+![like-get-like-by-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/70cafd86-df1f-4974-b46d-f408542c84b5)
+![like-get-like-by-nonexisting-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/f86672ae-86ce-4bd7-8b44-29d3c211b17d)
+![like-delete-nonexisting-like](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/8f2cd372-9a50-403e-8f87-35f7dad3f492)
+![like-delete](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/290d1714-5761-4821-a59c-98b62131e6bd)
 
 
 
