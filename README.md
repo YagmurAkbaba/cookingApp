@@ -1,9 +1,11 @@
 # COOKIDEA
 * Techcareer Java Spring Boot Bootcamp Graduation Project.
-* The project is a social media platform that recipes shared.
-* Users have to create accounts. (Register)
-* Login is also implemented.
-* Registered users can share, update, delete, like, and comment on recipes.
+* The project is a REST API that serves as a social media platform that recipes shared.
+* In the Project:
+  * Users have to create accounts. (Register)
+  * Login is also implemented.
+  * Registered users can share, update, delete, like, and comment on recipes.
+* Project front-end is under development. Check: https://github.com/YagmurAkbaba/cooking-App
 # Technologies
 * Java - Spring Boot
 * MySql
