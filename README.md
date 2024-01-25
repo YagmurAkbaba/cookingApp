@@ -10,9 +10,9 @@
 * IntelliJ
 * Postman
 # Project Details
-* Certain cases controlled such as user and/or recipe existence for update, delete, like, and comment operations.
-* Simple exception handling implemented.
 * Layered architecture implemented.
+* Simple exception handling implemented.
+* Certain cases controlled such as user and/or recipe existence for update, delete, like, and comment operations.
 ## Responses
 * ResponseEntity of response dtos, null and boolean values returned as a response.
 * HTTP Status Codes: 
