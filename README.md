@@ -6,7 +6,7 @@
   * Login is also implemented.
   * Registered users can share, update, delete, like, and comment on recipes.
 * The front-end of the project is under development. See: https://github.com/YagmurAkbaba/cooking-App
-# Technologies
+# Technologies Used
 * Java - Spring Boot
 * MySql
 * IntelliJ
