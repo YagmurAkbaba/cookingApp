@@ -1,3 +1,29 @@
+# COOKIDEA
+* Techcareer Java Spring Boot Bootcamp Graduation Project.
+* The project is a social media platform that recipes shared.
+* Users have to create accounts. (Register)
+* Login is also implemented.
+* Registered users can share, update, delete, like, and comment on recipes.
+# Technologies
+* Java - Spring Boot
+* MySql
+* IntelliJ
+* Postman
+# Project Details
+* Certain cases controlled such as user and/or recipe existence for update, delete, like, and comment operations.
+* Simple exception handling implemented.
+* Layered architecture implemented.
+## Responses
+* ResponseEntity of response dtos, null and boolean values returned as a response.
+* HTTP Status Codes: 
+  * 200 (OK) if successful
+  * 201 (Created) if successful registration
+  * 409 (Conflict) if registration attempt with an existing username
+  * 401 (Unauthorized) if unsuccessful login
+  * 422 (Unprocessable Entity) if controlls of certain cases not applicable
+  * 500 (Internal Server Error) if any exception occurs
+
+
 # REQUESTS
 ## AUTH REQUESTS
 ### Successful Registration
