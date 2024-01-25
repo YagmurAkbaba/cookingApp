@@ -101,14 +101,14 @@
 ![comment-get-all-of-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/d64bacfd-7bc3-4d1c-9a69-d9fcad564dde)
 ### Get all comments request with nonexisting userId
 ![comment-get-all-nonexisting-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c05defc4-7d99-4a9c-a0ac-81b72b3f32cd)
+### Get comment request of a user who has no comments
+![comment-get-all-user-of-no-comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e4f80425-458e-4e9d-8497-d6c057ccda87)
 ### Retrive all comments of a specific recipe
 ![comment-get-all-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/9b2908ff-9f22-484e-bbf9-0abafda41d5c)
 ### Get all comments request with nonexisting recipeId
 ![comment-get-all-no-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/27448936-bcbc-4bba-ac07-d0e15f760463)
 ### Get comments of a user at a specific recipe
 ![comment-get-all-recipe-and-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/a4cea98e-1b93-4fb1-8f9a-ef799d1cba35)
-### Get comment request of a user who has no comments
-![comment-get-all-user-of-no-comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e4f80425-458e-4e9d-8497-d6c057ccda87)
 ### Get comment of a user at a specific recipe request with non-existing recipeId and/or commentId 
 ![comment-get-all-nonexisting-user-or-and-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/dc9a0c33-9e42-426f-9c47-8a5e22587404)
 ### Retrieve a comment by commentId
