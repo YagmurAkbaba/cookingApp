@@ -107,11 +107,11 @@
 ![comment-get-all-no-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/27448936-bcbc-4bba-ac07-d0e15f760463)
 ### Get comments of a user at a specific recipe
 ![comment-get-all-recipe-and-user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/a4cea98e-1b93-4fb1-8f9a-ef799d1cba35)
-### Get comment request of a non-existing comment (the user has no comment on the recipe)
+### Get comment request of a user who has no comments
 ![comment-get-all-user-of-no-comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e4f80425-458e-4e9d-8497-d6c057ccda87)
 ### Get comment of a user at a specific recipe request with non-existing recipeId and/or commentId 
 ![comment-get-all-nonexisting-user-or-and-recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/dc9a0c33-9e42-426f-9c47-8a5e22587404)
-### Retrieve a like by commentId
+### Retrieve a comment by commentId
 ![comment-get-by-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/c784e79b-6e72-4bd5-ba48-24b4b13ecbeb)
 ### Get comment request with nonexisting commentId
 ![comment-get-by-nonexisting-id](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/2b23ea25-2050-40c8-89ce-8ec0f3cf92c0)
