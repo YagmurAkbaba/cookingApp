@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface LikeRepository extends JpaRepository<Like, Long> {
-    List<Like> findByUser_UserIdAndRecipe_RecipeId(Long userId, Long recipeId);
+    Like findByUser_UserIdAndRecipe_RecipeId(Long userId, Long recipeId);
 
     List<Like> findByUser_UserId(Long userId);
 

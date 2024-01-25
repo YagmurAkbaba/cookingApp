@@ -17,7 +17,7 @@ public class Recipe {
     private Long recipeId;
 
     // private Long userId;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün tarifleri da silinsin
     private User user;

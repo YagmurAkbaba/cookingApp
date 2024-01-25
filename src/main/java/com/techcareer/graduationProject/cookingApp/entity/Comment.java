@@ -17,14 +17,14 @@ public class Comment {
     // private Long recipeId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "recipe_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün tarifleri da silinsin
+    @OnDelete(action = OnDeleteAction.CASCADE) // Bir recipe silindiğinde bütün commentleri de silinsin
     @JsonIgnore
     Recipe recipe;
 
     // private Long userId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün tarifleri da silinsin
+    @OnDelete(action = OnDeleteAction.CASCADE) // Bir user silindiğinde bütün commentleri de silinsin
     @JsonIgnore
     User user;
 

@@ -7,6 +7,9 @@ import com.techcareer.graduationProject.cookingApp.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,40 +21,94 @@ public class UserService {
 
     /**
      * Dönüş tipleri, özel mesaj dönebiliriz.
-     * */
+     */
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
 
     public List<UserResponseDto> getAllUsers() {
-       return modelMapper.map(userRepository.findAll(), new TypeToken<List<UserResponseDto>>() {}.getType());
+        try {
+            return modelMapper.map(userRepository.findAll(), new TypeToken<List<UserResponseDto>>() {
+            }.getType());
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to retrieve users", e);
+
+        }
     }
 
     public Boolean createNewUser(UserCreateUpdateRequestDto userCreateUpdateRequestDto) {
-           userRepository.save(modelMapper.map(userCreateUpdateRequestDto, User.class));
-        return true;
+        try {
+            if (userCreateUpdateRequestDto.getPassword() != null && userCreateUpdateRequestDto.getUserName() != null) {
+                userRepository.save(modelMapper.map(userCreateUpdateRequestDto, User.class));
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to create user", e);
+
+        }
     }
 
     public UserResponseDto getUserById(Long userId) {
-       return modelMapper.map(userRepository.findById(userId), UserResponseDto.class);
+        try {
+            Optional<User> user = userRepository.findById(userId);
+            if (user.isPresent()) {
+                return modelMapper.map(user, UserResponseDto.class);
+            } else {
+                return null;
+            }
+
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to retrieve user with specified id", e);
+
+        }
+    }
+
+    public User getUserByUserName(String userName) {
+        try {
+            return userRepository.findByUserName(userName);
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to retrieve user with specified username", e);
+
+        }
     }
 
     public Boolean updateUserById(Long userId, UserCreateUpdateRequestDto userCreateUpdateRequestDto) {
-       Optional<User> optionalUser = userRepository.findById(userId);
-       if (optionalUser.isPresent()){
-           User user = optionalUser.get();
-           user.setUserName(userCreateUpdateRequestDto.getUserName());
-           user.setPassword(userCreateUpdateRequestDto.getPassword());
-           userRepository.save(user);
-           return true;
-       }
-        return false;
+        try {
+            Optional<User> optionalUser = userRepository.findById(userId);
+            if (optionalUser.isPresent()) {
+                User user = optionalUser.get();
+                user.setUserName(userCreateUpdateRequestDto.getUserName());
+                user.setPassword(userCreateUpdateRequestDto.getPassword());
+                userRepository.save(user);
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to update user", e);
+
+        }
 
     }
 
     public Boolean deleteUser(Long userId) {
-        userRepository.deleteById(userId);
-        return true;
+        try {
+            if (userRepository.findById(userId).isPresent()) {
+                userRepository.deleteById(userId);
+                return true;
+            }
+            return false;
+
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to delete recipe", e);
+        }
     }
 }

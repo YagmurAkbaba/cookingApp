@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 public class RecipeResponseDto {
-   // private User user; Loaded lazyly if it was Eagerly then it could be
+    // private User user; Loaded lazyly if it was Eagerly then it could be
     private Long recipeId;
     private String title;
     private List<String> ingredients;

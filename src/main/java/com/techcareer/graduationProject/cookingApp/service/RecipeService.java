@@ -9,6 +9,9 @@ import com.techcareer.graduationProject.cookingApp.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,43 +23,90 @@ public class RecipeService {
     private final RecipeRepository recipeRepository;
     private final UserService userService;
     private final ModelMapper modelMapper;
+    private static final Logger logger = LoggerFactory.getLogger(RecipeService.class);
 
     public List<RecipeResponseDto> getAllRecipes(Optional<Long> userId) {
-        if (userId.isPresent()) {
-            return modelMapper.map(recipeRepository.findByUser_UserId(userId.get()), new TypeToken<List<RecipeResponseDto>>() {
-            }.getType());
-        }
+        try {
+            if (userId.isPresent()) {
+                UserResponseDto userById = userService.getUserById(userId.get());
+                if (userById != null) {
+                    return modelMapper.map(recipeRepository.findByUser_UserId(userId.get()), new TypeToken<List<RecipeResponseDto>>() {
+                    }.getType());
+                }
+                return null;
+            }
 
-        return modelMapper.map(recipeRepository.findAll(), new TypeToken<List<RecipeResponseDto>>() {}.getType());
+            return modelMapper.map(recipeRepository.findAll(), new TypeToken<List<RecipeResponseDto>>() {
+            }.getType());
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to retrieve recipes", e);
+
+        }
     }
 
     public RecipeResponseDto getRecipeById(Long recipeId) {
-        return modelMapper.map(recipeRepository.findById(recipeId), RecipeResponseDto.class);
+        try {
+            Optional<Recipe> byId = recipeRepository.findById(recipeId);
+            if (byId.isPresent()) {
+                return modelMapper.map(byId, RecipeResponseDto.class);
+            }
+            return null;
+
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to retrieve recipe with specified id", e);
+
+        }
     }
 
     public Boolean createNewRecipe(RecipeCreateRequestDto recipeCreateRequestDto) {
-        UserResponseDto userResponseDto = userService.getUserById(recipeCreateRequestDto.getUserId());
-        if (userResponseDto == null)
-            return false;
-        recipeRepository.save(modelMapper.map(recipeCreateRequestDto, Recipe.class));
-        return true;
+        try {
+            UserResponseDto userResponseDto = userService.getUserById(recipeCreateRequestDto.getUserId());
+            System.out.println("user response dto");
+            System.out.println(userResponseDto);
+            if (userResponseDto == null)
+                return false;
+            recipeRepository.save(modelMapper.map(recipeCreateRequestDto, Recipe.class));
+            return true;
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to create recipe", e);
+
+        }
     }
 
     public Boolean updateRecipeById(Long recipeId, RecipeUpdateRequestDto recipeUpdateRequestDto) {
-        Optional<Recipe> optionalRecipe = recipeRepository.findById(recipeId);
-        if (optionalRecipe.isPresent()){
-            Recipe recipe = optionalRecipe.get();
-            recipe.setText(recipeUpdateRequestDto.getText());
-            recipe.setIngredients(recipeUpdateRequestDto.getIngredients());
-            recipe.setTitle(recipeUpdateRequestDto.getTitle());
-            recipeRepository.save(recipe);
-            return true;
+        try {
+            Optional<Recipe> optionalRecipe = recipeRepository.findById(recipeId);
+            if (optionalRecipe.isPresent()) {
+                Recipe recipe = optionalRecipe.get();
+                recipe.setText(recipeUpdateRequestDto.getText());
+                recipe.setIngredients(recipeUpdateRequestDto.getIngredients());
+                recipe.setTitle(recipeUpdateRequestDto.getTitle());
+                recipeRepository.save(recipe);
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to update recipe", e);
+
         }
-        return false;
     }
 
     public Boolean deleteRecipe(Long recipeId) {
-        recipeRepository.deleteById(recipeId);
-        return true;
+        try {
+            if (recipeRepository.findById(recipeId).isPresent()) {
+                recipeRepository.deleteById(recipeId);
+                return true;
+            }
+
+            return false;
+
+        } catch (Exception e) {
+            logger.error("An exception occurred:", e);
+            throw new RuntimeException("Failed to delete recipe", e);
+        }
     }
 }
