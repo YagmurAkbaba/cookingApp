@@ -15,6 +15,9 @@
 * Layered architecture implemented.
 * Simple exception handling implemented.
 * Certain cases controlled such as user and/or recipe existence for update, delete, like, and comment operations.
+## UML Class Diagram of Entities
+![Entity-uml-class-diagram](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/9a855970-db0b-4b53-96c5-06722d893765)
+# REQUESTS
 ## Responses
 * ResponseEntity of response dtos, null and boolean values returned as a response.
 * HTTP Status Codes: 
@@ -24,9 +27,6 @@
   * 401 (Unauthorized) if unsuccessful login
   * 422 (Unprocessable Entity) if controlls of certain cases not applicable
   * 500 (Internal Server Error) if any exception occurs
-## UML Class Diagram of Entities
-![Entity-uml-class-diagram](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/9a855970-db0b-4b53-96c5-06722d893765)
-# REQUESTS
 ## AUTH REQUESTS
 ### Successful Registration
 ![auth-successful-register](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/689716db-c6ad-4d31-9149-94e3ffef2b3b)
