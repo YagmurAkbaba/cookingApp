@@ -17,6 +17,17 @@
 * Certain cases controlled such as user and/or recipe existence for update, delete, like, and comment operations.
 ## UML Class Diagram of Entities
 ![Entity-uml-class-diagram](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/9a855970-db0b-4b53-96c5-06722d893765)
+## DB Tables
+### User
+![user](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/52ac801a-9cf8-44a6-b5ec-68929b42d8e2)
+### Recipe
+![recipe](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/621c7618-7547-4bb4-bb71-46eb0892277f)
+### Recipe Ingredients
+![recipe_ingredients](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/e3cdf8a5-88cc-4be0-93e9-5f7a79efa047)
+### Like
+![like](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/064c1551-2e82-406d-b6e4-3300ef564d32)
+### Comment
+![comment](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/a5819cbb-c807-4fae-bf2e-3a1c0d8357a7)
 # REQUESTS
 ## Responses
 * ResponseEntity of response dtos, null and boolean values returned as a response.
