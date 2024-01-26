@@ -24,8 +24,8 @@
   * 401 (Unauthorized) if unsuccessful login
   * 422 (Unprocessable Entity) if controlls of certain cases not applicable
   * 500 (Internal Server Error) if any exception occurs
-
-
+## UML Class Diagram of Entities
+![Entity-uml-class-diagram](https://github.com/YagmurAkbaba/cookingApp/assets/81877857/9a855970-db0b-4b53-96c5-06722d893765)
 # REQUESTS
 ## AUTH REQUESTS
 ### Successful Registration
